@@ -2,7 +2,6 @@ import random
 import numpy as np
 import pandas as pd
 import yfinance as yf
-#import datetime as dt
 import streamlit as st
 
 st.title('Analyst Recommender')
