@@ -55,9 +55,9 @@ if status_radio == 'Search':
     ticker = ticker_input
     
     st.header("Enter in how many randomly chosen stocks")
-    number_input = st.number_input('Please enter number here you can type it in:')
+    number_input = st.number_input('Please enter number here you can type it in:', min_value = 0, max_value = 500, step = 1)
     number_input = int(number_input)
-    print(type(number_input))
+    #print(type(number_input))
     number_radio = st.radio("Please click Search when you've picked a number", ('Entry', 'Search'))
     
     if number_radio == "Search":
@@ -125,3 +125,8 @@ if status_radio == 'Search':
                 
         similar_score = round(max_score / result[str(ticker)][len(result) - 1] * 100,2)
         st.write("the stock that is similar is", similar_stock, "and is ", similar_score,"% similar by analysts ratings" )
+        
+        
+st.write('Disclaimer: Information and output provided on this site does \
+         not constitute investment advice.')
+st.write('Created by Diego Alvarez')
